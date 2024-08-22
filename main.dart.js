@@ -86536,7 +86536,7 @@ if($.Ks===-1)$.Ks=$.eO
 s=t.p
 r=A.cT(A.cX(A.a([B.Dc,A.ht(26,26,!0,$.aLr[$.eO],B.aq,B.u,B.dI,375)],s),B.L,B.N,B.O),o,o)
 q=$.eO
-p=A.axH(q===0,n.gapZ(),54,315,"\u4e2d\u6587\u4e2d\u6587\u4e2d\u6587\u4e2d\u6587\u4e2d\u6587\u4e2d\u6587\u4e2d\u6587\u4e2d\u6587")
+p=A.axH(q===0,n.gapZ(),54,315,"\u4e2d\u6587\uff08\u7b80\u4f53)")
 return new A.i4(A.es(A.dO(B.an,A.a([r,A.cT(A.cX(A.a([B.De,p,B.Di,A.axH(q===1,n.gaq0(),54,315,"English")],s),B.L,B.N,B.O),o,o),A.ea(90,A.IH(new A.ac2(a),$.aLg[$.eO]),o,o,0,0,o,o)],s),B.I,B.ah),m.a.b,o),375,!1,o)}}
 A.ac2.prototype={
 $0(){$.Ks=-1
@@ -86553,7 +86553,7 @@ J(a){var s,r=null,q=new A.ac5(),p=A.cT(A.ce("assets/images/landing_img2.png",r,r
 o=o[n]
 o=A.aU(r,A.axI(B.lj,q,A.ayP(),B.zP,!0,!1,"icon_mail.png",o,o,"demo@revillimite.com"),B.l,r,r,r,r,r,313)
 s=$.aLi[n]
-return new A.i4(A.cX(A.a([B.iR,B.mq,p,B.mr,o,B.bC,A.aU(r,A.axI(B.lj,q,A.ayP(),B.zP,!0,!0,"icon_Lock.png",s,s,"@Rev2024!"),B.l,r,r,r,r,r,313),B.cr,A.aU(r,A.IH(new A.ac4(a),$.aue[n]),B.l,r,r,r,r,r,r),A.aU(r,A.eA(14,14,$.aLe[n],B.aq,B.c1,B.b_),B.l,r,r,r,r,r,r),B.cr,A.ce("assets/images/Rev Logo.png",r,r,r,r,34,r,82),B.bC],t.p),B.L,B.N,B.O),375,!1,r)}}
+return new A.i4(A.cX(A.a([B.iR,B.mq,p,B.mr,o,B.bC,A.aU(r,A.axI(B.lj,q,A.ayP(),B.zP,!0,!0,"icon_lock.png",s,s,"@Rev2024!"),B.l,r,r,r,r,r,313),B.cr,A.aU(r,A.IH(new A.ac4(a),$.aue[n]),B.l,r,r,r,r,r,r),A.aU(r,A.eA(14,14,$.aLe[n],B.aq,B.c1,B.b_),B.l,r,r,r,r,r,r),B.cr,A.ce("assets/images/Rev Logo.png",r,r,r,r,34,r,82),B.bC],t.p),B.L,B.N,B.O),375,!1,r)}}
 A.ac5.prototype={
 $2(a,b){},
 $S:504}
