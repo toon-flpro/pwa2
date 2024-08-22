@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  
+    <base href="/"> -->
 
     <meta charset="UTF-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -12,10 +26,10 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style"content="black-translucent">
-    <meta name="theme-color" content="#E0E7FF">
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E0E7FF">
-    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#E0E7FF">
-    <meta name="msapplication-TileColor" content="#E0E7FF">
+    <meta name="theme-color" content="#E0E7FF"> <!-- not working on PWA, only safari -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E0E7FF"> <!-- not working on PWA -->
+    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#E0E7FF"> <!-- not working on PWA -->
+    <meta name="msapplication-TileColor" content="#E0E7FF"> <!-- only for MS -->
 
     <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
@@ -27,18 +41,25 @@
 
     <script>
       // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = '"299244014"';
+      const serviceWorkerVersion = '"2347019200"';
   </script>
+  <script>
+  function changeBackgroundColor(color) {
+      document.body.style.backgroundColor = color;
+      
+      var themeColorMeta = document.getElementById('theme-color-meta');
+      if (themeColorMeta) {
+        themeColorMeta.setAttribute('content', color);
+      }
+    }
+  </script>
+  
     <!-- This script adds the flutter initialization JS code -->
     <script src="flutter.js" defer></script>
   </head>
   <style>
     body {
-      /*min-height: calc(100% + env(safe-area-inset-top));
-      padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
-      margin: 0;
-      background-size: cover;*/
-      background-color: #E0E7FF;
+      background-color: #E0E7FF; /* PWA header bar color, cannot be transparent, change by flutter code  */
     }
   #loader {
     position: fixed;
