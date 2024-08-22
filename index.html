@@ -27,10 +27,10 @@
 
     <script>
       // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = '"1432376467"';
+      const serviceWorkerVersion = '{{flutter_service_worker_version}}';
   </script>
   <script>
-    function changeBackgroundColor(color) {
+  function changeBackgroundColor(color) {
       document.body.style.backgroundColor = color;
       
       //not working...
@@ -39,15 +39,6 @@
         themeColorMeta.setAttribute('content', color);
       }
     }
-
-    document.addEventListener('DOMContentLoaded', function() {
-      // Listen for the custom Flutter event
-      window.addEventListener('flutter-ready', function() {
-        alert('Flutter has finished loading!');
-        document.getElementById('loader').style.display = 'none';
-        document.getElementById('app-content').style.display = 'block';
-      });
-    });
   </script>
   
     <!-- This script adds the flutter initialization JS code -->
@@ -74,13 +65,35 @@
     height: 150px;
   }
 </style>
-<body>
-  <div id="loader">
-    <img src="loading.gif" alt="Loading...">
-  </div>
+  <body>
+    <div id="loader">
+      <img src="loading.gif" alt="Loading...">
+    </div>
 
-  <div id="app-content" style="display: none;">
-  </div>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+    <div id="app-content" style="display: none;">
+    </div>
+
+    <script>
+    window.addEventListener('load', function(ev) {
+      
+
+      // Download main.dart.js
+      _flutter.loader.loadEntrypoint({
+        serviceWorker: {
+          serviceWorkerVersion: serviceWorkerVersion,
+        },
+        onEntrypointLoaded: function(engineInitializer) {
+          engineInitializer.initializeEngine().then(function(appRunner) {
+            appRunner.runApp();
+            var loader = document.getElementById('loader');
+            var appContent = document.getElementById('app-content');
+            loader.style.display = 'none';
+            appContent.style.display = 'block';
+          });
+        }
+      });
+    });
+  </script>
+
+  </body>
 </html>
