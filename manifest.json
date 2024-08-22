@@ -1,11 +1,11 @@
 {
-    "name": "flutter_application_1",
-    "short_name": "flutter_application_1",
+    "name": "泉州青年商会",
+    "short_name": "泉州青年商会",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#E0E7FF",
+    "theme_color": "#E0E7FF",
+    "description": "专为青年商务专业人士设计的应用程序。",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
