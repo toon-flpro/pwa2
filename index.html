@@ -26,9 +26,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style"content="black-translucent">
-    <meta name="theme-color" content="#E0E7FF"> <!-- not working on PWA, only safari -->
-    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#E0E7FF"> <!-- not working on PWA -->
-    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#E0E7FF"> <!-- not working on PWA -->
+    <meta name="theme-color" content="#FF0000"> <!-- #E0E7FF not working on PWA, only safari -->
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#00FF00"> <!-- not working on PWA -->
+    <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#0000FF"> <!-- not working on PWA -->
     <meta name="msapplication-TileColor" content="#E0E7FF"> <!-- only for MS -->
 
     <link rel="apple-touch-icon" href="icons/Icon-192.png">
@@ -41,17 +41,17 @@
 
     <script>
       // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = '"1313450335"';
+      const serviceWorkerVersion = '"2805208483"';
   </script>
   <script>
   function changeBackgroundColor(color) {
       document.body.style.backgroundColor = color;
       
       //not working...
-      var themeColorMeta = document.getElementById('theme-color-meta');
+      /*var themeColorMeta = document.getElementById('theme-color-meta');
       if (themeColorMeta) {
         themeColorMeta.setAttribute('content', color);
-      }
+      }*/
     }
   </script>
   
